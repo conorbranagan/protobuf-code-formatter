@@ -36,15 +36,22 @@ import (
 	proto "github.com/gogo/protobuf/proto"
 )
 
-const (
-	INDENT = "  "
-)
+var INDENT string = "  "
 
 var importsList []string
 var allFiles []*FileDescriptor
 var thisFile *FileDescriptor
 
 var commentsMap map[string]*SourceCodeInfo_Location
+
+func SetIndentWidth(width int) {
+	var b bytes.Buffer
+	for i := 0; i < width; i++ {
+		b.WriteString(" ")
+	}
+	INDENT = b.String()
+
+}
 
 // Handles the set of Files (but for provided filename only)
 func (this *FileDescriptorSet) Fmt(fileToFormat string) string {

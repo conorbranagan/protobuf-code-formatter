@@ -33,6 +33,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	descriptor "../protoc-gen-pretty/descriptor"
 	parser "github.com/hhatto/protobuf-code-formatter/protoc-gen-pretty/parser"
 )
 
@@ -46,8 +47,11 @@ func main() {
 	recurs = flag.Bool("r", false, "Indicates whether to recursively format the files in the argument folder.")
 	imp_path = flag.String("proto_path", "./", "The path to find all relative imported .proto files.")
 	exclude_dirs := flag.String("exclude_path", "None", "A list of directories that should not be included in the formatting (if done recursively)")
+	indent := flag.Int("indent", 2, "indent width")
 
 	flag.Parse()
+
+	descriptor.SetIndentWidth(*indent)
 
 	excluded = strings.Split(*exclude_dirs, ":")
 
