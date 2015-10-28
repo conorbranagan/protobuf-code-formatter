@@ -33,7 +33,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	descriptor "../protoc-gen-pretty/descriptor"
+	descriptor "github.com/hhatto/protobuf-code-formatter/protoc-gen-pretty/descriptor"
 	parser "github.com/hhatto/protobuf-code-formatter/protoc-gen-pretty/parser"
 )
 
