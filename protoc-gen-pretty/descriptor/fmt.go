@@ -27,12 +27,13 @@ package descriptor
 
 import (
 	"bytes"
-	proto "code.google.com/p/gogoprotobuf/proto"
 	"encoding/binary"
 	fmt "fmt"
 	regex "regexp"
 	sort "sort"
 	strings "strings"
+
+	proto "github.com/gogo/protobuf/proto"
 )
 
 const (

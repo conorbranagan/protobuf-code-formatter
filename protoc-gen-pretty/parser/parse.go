@@ -32,8 +32,8 @@ import (
 	"os/exec"
 	"strings"
 )
-import "github.com/DirkBrand/protobuf-code-formatter/protoc-gen-pretty/descriptor"
-import "code.google.com/p/gogoprotobuf/proto"
+import "github.com/hhatto/protobuf-code-formatter/protoc-gen-pretty/descriptor"
+import "github.com/gogo/protobuf/proto"
 
 type errCmd struct {
 	output []byte

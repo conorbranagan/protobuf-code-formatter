@@ -26,11 +26,12 @@ package main
 
 import (
 	"fmt"
-	parser "github.com/DirkBrand/protobuf-code-formatter/protoc-gen-pretty/parser"
 	"io/ioutil"
 	"os"
 	"strings"
 	"testing"
+
+	parser "github.com/hhatto/protobuf-code-formatter/protoc-gen-pretty/parser"
 )
 
 var fileLocation string = "testdata/"
